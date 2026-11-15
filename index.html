@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari d'inscripció</title>
+    <style>
+        #enviar {
+            width: 350px ;
+            background-color: black;
+            border: none;
+            color: white;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #222222;
+        }
+
+        .camp {
+            border-radius: 12px;
+            width: 430px;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #bbbbbb;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            margin-top: 4px;
+        }
+
+        form {
+            border: 1px solid #cccccc;
+            width: 480px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        button {
+            margin-top: 10px;
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        #color {
+            height: 35px;
+            border: 1px solid #bbbbbb;
+            margin-bottom: 10px;
+            width: 80px;
+            border-radius: 6px;
+            margin-top: 4px;
+        }
+
+        fieldset {
+            margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #cccccc;
+            padding: 15px;
+        }
+
+        .obligatori {
+            color: gray;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        #netejar {
+            border: 1px solid #bbbbbb;
+            color: black;
+            width: 110px;
+            background-color: white;
+        }
+
+        .capcalera {
+            text-align: center;
+            background-color: #e6ecf5;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        legend {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+
+        <div class="capcalera">
+            <h2>Formulari d'inscripció</h2>
+            <p>Activitats extraescolars · Curs 2026–2027</p>
+        </div>
+
+        <fieldset>
+            <legend><b>1. Dades personals</b></legend>
+
+            <label for="nom">Nom *</label><br>
+            <input class="camp" type="text"  id="nom" name="nom" placeholder="Escriu el teu nom" required><br>
+
+            <label for="cognoms">Cognoms *</label><br>
+            <input class="camp" type="text" id="cognoms" name="cognoms" placeholder="Escriu els cognoms" required><br>
+
+            <label for="correu">Correu electrònic *</label><br>
+            <input class="camp" type="email" id="correu" name="correu" placeholder="exemple@correu.com" required><br>
+
+            <label for="tel">Telèfon</label><br>
+            <input class="camp" type="tel" id="tel" name="tel" placeholder="600 000 000"><br>
+
+            <label for="data">Data de naixement *</label><br>
+            <input class="camp" type="date" id="data" name="data" required><br>
+
+            <label for="pass">Contrasenya *</label><br>
+            <input class="camp" type="password" id="pass" name="pass" placeholder="Introdueix una contrasenya" required>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>2. Informació acadèmica</b></legend>
+
+            <label for="curs">Curs actual *</label><br>
+            <select class="camp" id="curs" name="curs" required>
+                <option value="">Selecciona un curs</option>
+                <option value="1">1r ESO</option>
+                <option value="2">2n ESO</option>
+                <option value="3">3r ESO</option>
+                <option value="4">4t ESO</option>
+                <option value="5">CFGM SMX</option>
+            </select><br>
+
+            <p>Activitat que vols realitzar *</p>
+            <input type="radio" id="prog" name="activitat" value="programacio" required>
+            <label for="prog">Programació</label><br>
+
+            <input type="radio" id="robo" name="activitat" value="robotica">
+            <label for="robo">Robòtica</label><br>
+
+            <input type="radio" id="web" name="activitat" value="disseny">
+            <label for="web">Disseny web</label><br>
+
+            <input type="radio" id="esp" name="activitat" value="esports">
+            <label for="esp">Esports</label><br>
+
+            <p>Dies disponibles</p>
+            <input type="checkbox" id="dl" name="dies" value="dilluns">
+            <label for="dl">Dilluns</label><br>
+
+            <input type="checkbox" id="dt" name="dies" value="dimarts">
+            <label for="dt">Dimarts</label><br>
+
+            <input type="checkbox" id="dc" name="dies" value="dimecres">
+            <label for="dc">Dimecres</label><br>
+
+            <input type="checkbox" id="dj" name="dies" value="dijous">
+            <label for="dj">Dijous</label><br>
+
+            <input type="checkbox" id="dv" name="dies" value="divendres">
+            <label for="dv">Divendres</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>3. Informació addicional</b></legend>
+
+            <label for="color">Color preferit per a la teva identificació</label><br>
+            <input type="color" id="color" name="color" value="#4285db"><br>
+
+            <label for="nivell">Nivell d'experiència (de 0 a 10)</label><br>
+            <input class="camp" type="range" id="nivell" name="nivell" min="0" max="10" value="5"><br>
+
+            <label for="comentaris">Comentaris o observacions</label><br>
+            <textarea class="camp" id="comentaris" name="comentaris" rows="4" placeholder="Escriu aquí els teus comentaris..."></textarea><br>
+
+            <label for="fitxer">Adjunta un document (opcional)</label><br>
+            <input class="camp" type="file" id="fitxer" name="fitxer">
+        </fieldset>
+
+        <br>
+        <input type="checkbox" id="condicions" name="condicions" required>
+        <label for="condicions">Accepto la política de privacitat i les condicions d'inscripció. *</label>
+        <br>
+
+        <button id="enviar" type="submit">Enviar inscripció</button>
+        <button id="netejar" type="reset">Netejar</button>
+
+        <p class="obligatori">* Camps obligatoris</p>
+
+    </form>
+
+</body>
+</html>
